@@ -18,7 +18,17 @@ params:
   # 是否显示面包屑导航
   ShowBreadCrumbs: false
   # 是否显示阅读时间  
-  ShowReadingTime: true
+  ShowReadingTime: false
+  # 是否显示文章阅读进度条
+  ShowReadingProgress: true
+  # 是否显示文章目录
+  ShowToc: true
+  # 是否显示文章标签
+  ShowTags: true
+  # 是否显示文章分类
+  ShowCategories: true
+  # 是否显示文章归档
+  ShowArchives: true
   # 是否显示分享按钮
   ShowShareButtons: false
   # 是否显示文章作者
