@@ -11,9 +11,6 @@ params:
 
 # 启用首页个人简介展示
 params:
-  #网站统计
-  busuanzi:
-    enable: true
   # 是否启用评论。你需要自己配置，或者直接引入Giscus等评论系统
   comments: false
   # 是否显示代码复制按钮

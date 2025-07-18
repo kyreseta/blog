@@ -139,7 +139,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://kyreseta.dpdns.org/" accesskey="h" title="kyreseta (Alt + H)">kyreseta</a>
+            <a href="https://kyreseta.dpdns.org/" accesskey="h" title="KYRESETA&#39;S BLOG (Alt + H)">KYRESETA&#39;S BLOG</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -212,7 +212,40 @@
 <figure class="entry-cover">
         <img loading="eager" src="https://kyreseta.dpdns.org/%E6%96%87%E7%AB%A0%E5%B0%81%E9%9D%A2%E5%9B%BE%E3%80%82%E4%B9%9F%E6%94%AF%E6%8C%81HTTPS" alt="">
         
-</figure>
+</figure><div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e4%b8%80%e5%85%b3%e4%ba%8e%e5%b8%88%e8%b5%84%e5%8a%9b%e9%87%8f" aria-label="一、关于师资力量">一、关于师资力量</a></li>
+                <li>
+                    <a href="#%e4%ba%8c%e5%85%b3%e4%ba%8e%e5%88%86%e7%8f%ad%e6%83%85%e5%86%b5" aria-label="二、关于分班情况">二、关于分班情况</a></li>
+                <li>
+                    <a href="#%e4%b8%89%e5%85%b3%e4%ba%8e%e7%ab%9e%e8%b5%9b" aria-label="三、关于竞赛">三、关于竞赛</a></li>
+                <li>
+                    <a href="#%e5%9b%9b%e4%ba%a4%e9%80%9a" aria-label="四、交通">四、交通</a></li>
+                <li>
+                    <a href="#%e4%ba%94%e7%8e%af%e5%a2%83" aria-label="五、环境">五、环境</a></li>
+                <li>
+                    <a href="#%e5%85%ad%e5%85%b3%e4%ba%8e%e5%ad%a6%e6%a0%a1%e7%9a%84%e5%8f%91%e5%b1%95%e6%83%85%e5%86%b5" aria-label="六、关于学校的发展情况">六、关于学校的发展情况</a></li>
+                <li>
+                    <a href="#%e4%b8%83%e5%85%b3%e4%ba%8e%e4%bd%9c%e6%81%af" aria-label="七、关于作息">七、关于作息</a></li>
+                <li>
+                    <a href="#misc%e6%9d%82%e9%a1%b9%e7%a2%8e%e7%a2%8e%e5%bf%b5" aria-label="MISC（杂项/碎碎念）">MISC（杂项/碎碎念）</a><ul>
+                        
+                <li>
+                    <a href="#%e7%a5%9d%e5%a4%a7%e5%ae%b6%e4%b8%ad%e8%80%83%e5%a4%a7%e6%8d%b7-%e8%80%83%e5%88%b0%e8%87%aa%e5%b7%b1%e5%b8%8c%e6%9c%9b%e7%9a%84%e5%ad%a6%e6%a0%a1" aria-label="祝大家中考大捷 考到自己希望的学校！">祝大家中考大捷 考到自己希望的学校！</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
   <div class="post-content"><p><strong>事先说明 本文只对比开平市第一中学与开侨中学 其他学校笔者未了解过 故不对比
   其次 本文大部分对比来源于较为主观（指学长学姐（包括但不限于在读、毕业的老师）和开桥一中的老师、领导以及宣传册）<br>
   由于笔者个人认为并不完全客观 所以有观点不符的地方请指出 但请有一定的事实论据
@@ -333,6 +366,53 @@
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 
